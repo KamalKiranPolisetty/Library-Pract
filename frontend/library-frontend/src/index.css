@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "forButton"
+        "BookCards"
+        "footer";
+    gap: 20px;
+    padding: 20px;
+}
+
+.forButton{
+    display:flex;
+    justify-content: flex-end;
+}
+.create-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 25px 45px;
+    border: none;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.create-btn:hover {
+    background-color: #218838;
+}
+.header {
+    grid-area: header;
+    background-color: rgb(107, 64, 142);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bookCards {
+    
+    grid-area: BookCards;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.card {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(100% / 3 - 40px);
+  text-align: center;
+  transition: 0.3s ease-in ;
+}
+
+.card:hover{
+    background-color: rgb(172, 208, 192);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightcoral;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Fixed width for icons */
+    height: 40px; /* Fixed height for icons */
+    border-radius: 50%; /* Circular button */
+    margin: 5px; /* Spacing between icons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    background-color: #f0f0f0; /* Light background for the icons */
+    color: #333; /* Darker text/icon color for contrast */
+}
+
+.icon:hover {
+    background-color: #dedede; /* Darker background on hover */
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+.icon.update:hover {
+    color: #ffc107; /* Gold color on hover for update */
+}
+
+.icon.view:hover {
+    color: #007bff; /* Blue color on hover for view */
+}
+
+.icon.delete:hover {
+    color: #dc3545; /* Red color on hover for delete */
+}
